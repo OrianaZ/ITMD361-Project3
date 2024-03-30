@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Oriana Zup Project 2</title>
+    <link rel="stylesheet" type="text/css" href="css/cssreset.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+  </head>
+
+  <body id="games">
+    <section id="navigation">
+      <div class="table">
+        <div class="tr">
+          <div class="td"><a href="index.html" title="Homepage">Homepage</a>
+          <a href="resumes.html" title="Resume">Resume</a>
+          <a href="game.html" title="Games">Games</a></div>
+        </div>
+      </div>
+    </section>
+  
+    <section id="games-list">
+      <div class="table" id="gamesTable">
+        <div class="tr">
+          <div class="td">
+            <h1>Steam Games</h1>
+          </div>
+        </div>
+        <div class="tr" id="search-sort">
+          <div class="td">
+            <label for="searchInput">Search:</label>
+            <input type="text" id="searchInput" placeholder="Search..." oninput="handleSearch()">
+            <label for="sortDropdown">Sort by:</label>
+            <select id="sortDropdown" onchange="handleSortChange(this.value)">
+              <option value="playTime">Play Time</option>
+              <option value="name">Name</option>
+              <option value="achievements">Achievements</option>
+            </select>
+          </div>
+        </div>
+        <div class="tr" id="game1">
+          <div class="td">
+            <img src="imgs/game/ghl.jpg" alt="Hogwarts Legacy">
+            <h3>Hogwarts Legacy</h3>
+            <h4>Developer: Avalanche Software | Publisher: Warner Bros. Games</h4>
+            <h4>Play Time: 163.4 hours | Last Played: January 20, 2024 | Achievements: 44/45 </h4>
+            <p>Hogwarts Legacy is an immersive, open-world action RPG. Now you can take control of the action and be at the center of your own adventure in the wizarding world.</p>
+          </div>
+        </div>
+        <div class="tr" id="game2">
+          <div class="td">  
+            <img src="imgs/game/ghf.png" alt="House Flipper">
+            <h3>House Flipper</h3>
+            <h4>Developer: Empyrean | Publisher: Frozen District, PlayWay S.A.</h4>
+            <h4>Play Time: 128.9 hours | Last Played: October 7, 2023 | Achievements: 24/86 </h4>
+            <p>House Flipper is a unique chance to become a one-man renovation crew. Buy, repair and remodel devastated houses. Give them a second life and sell them at a profit!</p>
+          </div>
+        </div>
+        <div class="tr" id="game3">
+          <div class="td">  
+            <img src="imgs/game/glswcs.jpg" alt="LEGO® Star Wars™: The Complete Saga">
+            <h3>LEGO® Star Wars™: The Complete Saga</h3>
+            <h4>Developer: Traveller's Tales | Publisher: LucasArts, Lucasfilm, Disney</h4>
+            <h4>Play Time: 85 hours | Last Played: November 17, 2022 | Achievements: n/a</h4>
+            <p>Kick Some Brick in I through VI! Play through all six Star Wars movies in one videogame! Adding new characters, new levels, new features and for the first time ever, the chance to build and battle your way through a fun Star Wars galaxy on your PC!</p>
+          </div>
+        </div>
+        <div class="tr"  id="game4">
+          <div class="td">  
+            <img src="imgs/game/glswss.jpg" alt="LEGO® Star Wars™: The Skywalker Saga">
+            <h3>LEGO® Star Wars™: The Skywalker Saga</h3>
+            <h4>Developer: TT Games | Publisher: Warner Bros. Games, Warner Bros. Interactive Entertainment</h4>
+            <h4>Play Time: 77 hours | Last Played: December 1, 2023 | Achievements: 43/45 </h4>
+            <p>Play through all nine Skywalker saga films in a game unlike any other. With over 300 playable characters, over 100 vehicles, and 23 planets to explore, a galaxy far, far away has never been more fun! *Includes classic Obi-Wan Kenobi playable character</p>
+          </div>
+        </div>
+        <div class="tr" id="game5">
+          <div class="td">  
+            <img src="imgs/game/gpu.jpg" alt="PlateUp!">
+            <h3>PlateUp!</h3>
+            <h4>Developer: It's happening | Publisher: Yogscast Games</h4>
+            <h4>Play Time: 65.7 hours | Last Played: January 15, 2024 | Achievements: 15/26 </h4>
+            <p>Cook and serve your dishes, design and decorate your restaurants, and expand your culinary kingdom with new unlocks, abilities and dishes in procedurally-generated locations. Classic cooking action with permanent roguelite progression. Hire your friends - or do it all yourself!</p>
+          </div>
+        </div>
+        <div class="tr"  id="game6">
+          <div class="td">  
+            <img src="imgs/game/gau.jpg" alt="Among Us">
+            <h3>Among Us</h3>
+            <h4>Developer: Innersloth | Publisher: Innersloth</h4>
+            <h4>Play Time: 53.6 hours| Last Played: Sep 1, 2023 | Achievements: 14/23 </h4>
+            <p>An online and local party game of teamwork and betrayal for 4-15 players...in space!</p>
+          </div>
+        </div>
+        <div class="tr" id="game7">
+          <div class="td">  
+            <img src="imgs/game/glhp14.png" alt="LEGO® Harry Potter: Years 1-4">
+            <h3>LEGO® Harry Potter: Years 1-4</h3>
+            <h4>Developer: TT Games | Publisher: Warner Bros. Interactive Entertainment</h4>
+            <h4>Play Time: 50.5 hours | Last Played: April 19, 2023 | Achievements: n/a</h4>
+            <p>Build the adventure from Privet Drive to the Triwizard Tournament and experience the magic of the first four Harry Potter stories – LEGO style! Explore Hogwarts™ School of Witchcraft and Wizardry, learn spells, brew potions and relive the adventures like never before with tongue-in-cheek humor and creative customization that is unique to...</p>
+          </div>
+        </div>
+        <div class="tr" id="game8">
+          <div class="td">  
+            <img src="imgs/game/ges.png" alt="Escape Simulator">
+            <h3>Escape Simulator</h3>
+            <h4>Developer: Pine Studio | Publisher: Pine Studio</h4>
+            <h4>Play Time: 45.1 hours | Last Played: Jan 15, 2024 | Achievements: 24/25 </h4>
+            <p>First-person puzzler you can play solo or in an online co-op (best with 2-3 players, but playable with more). Explore a set of highly interactive escape rooms. Move furniture, pick up and examine everything, smash pots and break locks! Supports community rooms through the level editor.</p>
+          </div>
+        </div>
+        <div class="tr" id="game9">
+          <div class="td">  
+            <img src="imgs/game/glhp57.jpg" alt="LEGO® Harry Potter: Years 5-7">
+            <h3>LEGO® Harry Potter: Years 5-7</h3>
+            <h4>Developer: Traveller's Tales | Publisher: Warner Bros. Interactive Entertainment</h4>
+            <h4>Play Time: 22.9 hours | Last Played: December 1, 2022 | Achievements: n/a</h4>
+            <p>LEGO Harry Potter: Years 5-7 takes players through Harry Potter's heroic adventures in the Muggle and wizarding worlds.</p>
+          </div>
+        </div>
+        <div class="tr" id="game10">
+          <div class="td">  
+            <img src="imgs/game/ghs.jpg" alt="The Henry Stickmin Collection">
+            <h3>The Henry Stickmin Collection</h3>
+            <h4>Developer: The Henry Stickmin Collection | Publisher: Innersloth</h4>
+            <h4>Play Time: 5.5 hours | Last Played: January 30, 2023 | Achievements: 82/82 </h4>
+            <p>A choose-your-own-path where failing is more fun than succeeding.</p>
+          </div>
+        </div>
+        <div class="tr" id="game11">
+          <div class="td">  
+            <img src="imgs/game/gii.jpg" alt="Islands of Insight">
+            <h3>Islands of Insight Open Playtest</h3>
+            <h4>Developer: Lunarch Studios | Publisher: Behaviour Interactive Inc.</h4>
+            <h4>Play Time: 3 hours| Last Played: September 20, 2023 | Achievements: n/a</h4>
+            <p>Islands of Insight is an epic shared-world puzzle game where you play as a Seeker on a peaceful journey of exploration and discovery. Seek out and solve mysterious puzzles at your own pace across an awe-inspiring world of floating islands.</p>
+          </div>
+        </div>
+        <div class="tr" id="game12">
+          <div class="td">  
+            <img src="imgs/game/gtl.jpg" alt="The Looker">
+            <h3>The Looker</h3>
+            <h4>Developer: Subcreation Studio | Publisher: Subcreation Studio</h4>
+            <h4>Play Time: 0.92 hours | Last Played: January 15, 2024 | Achievements: 10/10 </h4>
+            <p>You wake up, alone, on a strangely familiar island full of puzzles that will frustrate and annoy you.</p>
+          </div>
+        </div>
+        <div class="tr" id="game13">
+          <div class="td">  
+            <img src="imgs/game/gcg.jpg" alt="Crab Game">
+            <h3>Crab Game</h3>
+            <h4>Developer: Dani | Publisher: Dani</h4>
+            <h4>Play Time: 0.85 hours | Last Played: Nov 10, 2021 | Achievements: n/a</h4>
+            <p>Crab Game is a First-Person Multiplayer game where you play through several different minigames based on children's games, until only one player stands victorious.</p>
+          </div>
+        </div>
+        <div class="tr" id="game14">
+          <div class="td">  
+            <img src="imgs/game/ggi.png" alt="Golf It!">
+            <h3>Golf It!</h3>
+            <h4>Developer: Perfuse Entertainment | Publisher: Perfuse Entertainment</h4>
+            <h4>Play Time: 0.42 hours | Last Played: Dec 8, 2022 | Achievements: 3/44 </h4>
+            <p>Embark on an exciting journey with Golf It! Seize your putter, rally your friends, and immerse yourself in an epic minigolf adventure. Conquer countless courses, create lasting memories, and refine your skills to emerge as the ultimate minigolf champion. Your thrilling golfing odyssey begins here!</p>
+          </div>
+        </div>
+        <div class="tr" id="game15">
+          <div class="td">  
+            <img src="imgs/game/gting.jpg" alt="There is no game">
+            <h3>There is no game: Jame Edition 2015</h3>
+            <h4>Developer: Draw Me A Pixel | Publisher: Draw Me A Pixel</h4>
+            <h4>Play Time: 0.28 hours | Last Played: January 16, 2024 | Achievements: 7/7 </h4>
+            <p>A little game that’s not a game, winner of an old game jam that nobody’s ever heard of. So DON'T INSTALL IT!</p>
+          </div>
+        </div>
+        <div class="tr" id="game16">
+          <div class="td">  
+            <img src="imgs/game/glswfa.jpg" alt="LEGO® STAR WARS™: The Force Awakens">
+            <h3>LEGO® STAR WARS™: The Force Awakens</h3>
+            <h4>Developer: Traveller's Tales, TT Games, Feral Interactive (Mac) | Publisher: Warner Bros. Interactive Entertainment, Feral Interactive (Mac)</h4>
+            <h4>Play Time: 0.22 hours | Last Played: December 8, 2023 | Achievements: 0/69 </h4>
+            <p>The No. 1 LEGO® videogame franchise triumphantly returns with a fun-filled, humorous journey based on the blockbuster film. The game will also feature brand new story content from the Star Wars Universe that explores the time between Star Wars: Return of the Jedi and Star Wars: The Force Awakens.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      function handleSearch() {
+        var searchInput = document.getElementById("searchInput");
+        var filter = searchInput.value.toLowerCase();
+        var table = document.getElementById("gamesTable");
+        var rows = table.getElementsByClassName("tr");
+        for (var i = 2; i < rows.length; i++) {
+          var rowText = rows[i].innerText.toLowerCase();
+          if (rowText.indexOf(filter) > -1) {
+            rows[i].style.display = "";
+          } else {
+            rows[i].style.display = "none";
+          }
+        }
+      }
+       function handleSortChange(selectedValue) {
+        switch (selectedValue) {
+          case 'name':
+            sortByName();
+            break;
+          case 'playTime':
+            sortByPlayTime();
+            break;
+          case 'achievements':
+            sortByAchievements();
+            break;
+          default:
+            console.error('Invalid sort option');
+        }
+      }
+      function sortTable(compareFunction) {
+        var table = document.getElementById("gamesTable");
+        if (!table) {
+          console.error("Table not found.");
+          return;
+        }
+        var rows = Array.from(table.getElementsByClassName("tr")).slice(2);
+        rows.sort(compareFunction);
+        for (var i = 0; i < rows.length; i++) {
+          table.appendChild(rows[i]);
+        }
+      }
+      function sortByName() {
+        sortTable(function (a, b) {
+          var titleA = a.getElementsByTagName("h3")[0];
+          var titleB = b.getElementsByTagName("h3")[0];
+          if (!titleA || !titleB) {
+            console.error("Title element not found.");
+            return 0;
+          }
+          titleA = titleA.innerText.toLowerCase();
+          titleB = titleB.innerText.toLowerCase();
+          return titleA.localeCompare(titleB);
+        });
+      }
+      function sortByPlayTime() {
+        sortTable(function (a, b) {
+          var playTimeA = getPlayTime(a);
+          var playTimeB = getPlayTime(b);
+          return playTimeB - playTimeA;
+        });
+      }
+      function sortByAchievements() {
+        sortTable(function (a, b) {
+          var achievementsA = evalFraction(getAchievements(a));
+          var achievementsB = evalFraction(getAchievements(b));
+          return achievementsB - achievementsA;
+        });
+      }
+      function getPlayTime(row) {
+        var playTimeElement = row.getElementsByTagName("h4")[1];
+        if (!playTimeElement) {
+          console.error("Play time element not found.");
+          return 0;
+        }
+        return parseFloat(playTimeElement.innerText.split(":")[1].trim().split(" ")[0]) || 0;
+      }
+      function getAchievements(row) {
+        var achievementsElement = row.getElementsByTagName("h4")[1];
+        if (!achievementsElement) {
+          console.error("Achievements element not found.");
+          return 0;
+        }
+        var fractionString = achievementsElement.innerText.split(":")[3].trim();
+        return fractionString === "n/a" ? -1 : fractionString;
+      }
+      function evalFraction(fractionString) {
+        if (fractionString === "n/a") {
+          return -1;
+        }
+        try {
+          return eval(fractionString) || 0;
+        } catch (error) {
+          console.error("Error evaluating fraction:", error);
+          return 0;
+        }
+      }
+    </script>
+  </body>
+</html>

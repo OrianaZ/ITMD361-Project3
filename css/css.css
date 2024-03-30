@@ -1,0 +1,207 @@
+/*universal*/
+body {
+  background-color: rgb(201, 158, 241);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, h3, h4, p, label, a {
+  color: black;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1{
+  font-size: 36px;
+  margin-bottom:5px;
+  font-family: 'Pacifico', Arial, sans-serif;
+}
+
+h2{
+  color: rgb(154, 113, 192);
+  margin-bottom: 15px;
+  margin-top:20px;
+}
+
+h3{
+  margin-bottom: 5px;
+}
+
+h4{
+  font-style: italic;
+  font-weight:normal;
+  margin: 5px;
+}
+
+hr {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+p{
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+.table {
+  width: 80%;
+  margin: auto;
+  border-collapse: separate;
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/*navigation*/
+#navigation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#navigation a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 30px;
+}
+
+#navigation .table a:hover {
+  background-color: rgb(161, 161, 161);
+}
+
+#navigation .table{
+  width: 100%;
+  background-color: gray;
+  margin-top:0px;
+  padding-left:10%;
+  padding-right:10%;
+  display: flex;
+  justify-content: center;
+}
+/* end navigation*/
+
+/*start resume unique */
+#resume .table {
+  display: flex;
+}
+#resume .td{
+  flex:1;
+}
+
+#resume .left {
+  width: 100%;
+  margin-right: 5%;
+  padding-right: 20px;
+}
+
+#resume .right{
+  width: 90%;
+  margin-right: 5%;
+  padding-left: 20px;
+  margin-top: 15%;
+}
+
+#resume #resume-work{
+  margin-top:7.75%;
+}
+
+#resume img {
+  width:10%
+}
+
+#resume #resume-name img {
+  border-radius: 50%;
+  width:100%;
+}
+
+#resume #resume-education img{
+  max-width:5%;
+}
+
+#resume h2 {
+  margin-bottom: 0px;
+}
+/*end resume unique */
+
+/* start games unique*/
+#games #search-sort {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#games #searchInput {
+  border: none;
+  border-bottom: 2px solid rgb(201, 158, 241);
+  padding: 5px;
+  margin-right: 10px;
+  outline: none;
+  color: rgb(201, 158, 241);
+  font-size: 16px;
+}
+
+#games #search-box::placeholder {
+  color: #95a5a6;
+}
+
+#games #sortDropdown {
+  background-color: rgb(201, 158, 241);
+  color: #fff;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+}
+
+#games img{
+  margin-top:15px;
+}
+
+#games h3{
+  font-size: 22px;
+  color: rgb(154, 113, 192);
+}
+/* end games unique*/
+
+/*start homepage unique */
+#homepage video {
+  max-width: 300px;
+  width: 50%;
+}
+
+#homepage img {
+  max-width:300px;
+  width: 50%;
+}
+
+#homepage h3{
+  color: rgb(154, 113, 192);
+  margin-top: 15px;
+}
+
+#homepage-milkshake, #homepage-cookie {
+  text-align: center;
+}
+
+#homepage #popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+#homepage #popup img {
+  max-width: 25%;
+}
+/*end homepage unique */
