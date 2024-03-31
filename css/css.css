@@ -247,7 +247,8 @@ p{
   margin: auto;
   width: 80%;
   height: 80vh;
-  border: 2px solid #000;
+  border: 3px solid rgb(132, 74, 187);
+  border-radius: 10px;
 }
 
 #mapComponent{
