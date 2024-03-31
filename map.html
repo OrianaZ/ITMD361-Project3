@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Oriana Zup Project 3</title>
+    <link rel="stylesheet" type="text/css" href="css/cssreset.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOM8nEO2MVUlGhxmHIWVDwGAoyf-G0Zak&callback=initMap&libraries=places" async defer></script>
+    <script src="index.js"></script>
+  </head>
+  <body id="maps">
+    <section id="navigation">
+      <div class="table">
+        <div class="tr">
+          <div class="td">
+            <a href="index.html" title="Homepage">Homepage</a>
+            <a href="resumes.html" title="Resume">Resume</a>
+            <a href="game.html" title="Games">Games</a>
+            <a href="map.html" title="Maps">Maps</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mapComponent">
+      <div id="mapframe">
+        <gmp-map center="40.12150192260742,-100.45039367675781" zoom="5" map-id="Proj-3-Map"></gmp-map>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          initMap();
+        });
+      </script>
+      <div id="searchBox">
+        <input id="pac-input" type="text" placeholder="Search Box">
+        <input id="pac-input-1" class="controls" type="text" placeholder="Start Location">
+        <input id="pac-input-2" class="controls" type="text" placeholder="End Location">
+        <button id="pac-input-3" class="controls" onclick="findRoute()">Find Route</button>
+      </div>
+    </section>
+  </body>
+</html>
+
