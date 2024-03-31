@@ -49,9 +49,9 @@ p{
   border-collapse: separate;
   background-color: white;
   padding: 20px;
-  margin-top: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
 }
 
 /*navigation*/
