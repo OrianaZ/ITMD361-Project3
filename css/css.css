@@ -251,11 +251,7 @@ p{
 }
 
 #mapComponent{
-  padding-top: 20px;
-}
-
-gmp-map {
-  height: 100%;
+  padding-top: 25px;
 }
 
 #pac-input {
