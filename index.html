@@ -5,6 +5,7 @@
     <title>Oriana Zup Project 3</title>
     <link rel="stylesheet" type="text/css" href="css/cssreset.css">
     <link rel="stylesheet" type="text/css" href="css/css.css">
+    <script src="index.js"></script>    
   </head>
 
   <body id="homepage">
@@ -47,11 +48,36 @@
             <img class="popup-trigger" src="imgs/home/hbunny.jpeg" alt="Cookie">
           </div>
         </div>
+        <section id="slider">
+          <h2>Preview of Games</h2>
+          <div class="slider-container">
+            <img class="slider-image" src="imgs/game/ghl.jpg" alt="Hogwarts Legacy">
+            <img class="slider-image" src="imgs/game/ghf.png" alt="House Flipper">
+            <img class="slider-image" src="imgs/game/glswcs.jpg" alt="LEGO® Star Wars™: The Complete Saga">
+            <img class="slider-image" src="imgs/game/glswss.jpg" alt="LEGO® Star Wars™: The Skywalker Saga">
+            <img class="slider-image" src="imgs/game/gpu.jpg" alt="PlateUp!">
+            <img class="slider-image" src="imgs/game/gau.jpg" alt="Among Us">
+            <img class="slider-image" src="imgs/game/glhp14.png" alt="LEGO® Harry Potter: Years 1-4">
+            <img class="slider-image" src="imgs/game/ges.png" alt="Escape Simulator">
+            <img class="slider-image" src="imgs/game/glhp57.jpg" alt="LEGO® Harry Potter: Years 5-7">
+            <img class="slider-image" src="imgs/game/ghs.jpg" alt="The Henry Stickmin Collection">
+            <img class="slider-image" src="imgs/game/gii.jpg" alt="Islands of Insight">
+            <img class="slider-image" src="imgs/game/gtl.jpg" alt="The Looker">
+            <img class="slider-image" src="imgs/game/gcg.jpg" alt="Crab Game">
+            <img class="slider-image" src="imgs/game/ggi.png" alt="Golf It!">
+            <img class="slider-image" src="imgs/game/gting.jpg" alt="There is no game">
+            <img class="slider-image" src="imgs/game/glswfa.jpg" alt="LEGO® STAR WARS™: The Force Awakens">
+          </div>
+          <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+          <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </section>
       </div>
     </section>
+
     <div id="popup">
       <img id="popup-content" alt="Enlarged Image or Video" src="imgs/home/placeholder.png">
     </div>
+
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         var popupTriggers = document.querySelectorAll('.popup-trigger');

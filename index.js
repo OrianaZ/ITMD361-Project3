@@ -114,3 +114,120 @@ function findRoute() {
 }
 
 //key=AIzaSyAOM8nEO2MVUlGhxmHIWVDwGAoyf-G0Zak
+
+//games searches
+function handleSearch() {
+  var searchInput = document.getElementById("searchInput");
+  var filter = searchInput.value.toLowerCase();
+  var table = document.getElementById("gamesTable");
+  var rows = table.getElementsByClassName("tr");
+  for (var i = 2; i < rows.length; i++) {
+    var rowText = rows[i].innerText.toLowerCase();
+    if (rowText.indexOf(filter) > -1) {
+      rows[i].style.display = "";
+    } else {
+      rows[i].style.display = "none";
+    }
+  }
+}
+ function handleSortChange(selectedValue) {
+  switch (selectedValue) {
+    case 'name':
+      sortByName();
+      break;
+    case 'playTime':
+      sortByPlayTime();
+      break;
+    case 'achievements':
+      sortByAchievements();
+      break;
+    default:
+      console.error('Invalid sort option');
+  }
+}
+function sortTable(compareFunction) {
+  var table = document.getElementById("gamesTable");
+  if (!table) {
+    console.error("Table not found.");
+    return;
+  }
+  var rows = Array.from(table.getElementsByClassName("tr")).slice(2);
+  rows.sort(compareFunction);
+  for (var i = 0; i < rows.length; i++) {
+    table.appendChild(rows[i]);
+  }
+}
+function sortByName() {
+  sortTable(function (a, b) {
+    var titleA = a.getElementsByTagName("h3")[0];
+    var titleB = b.getElementsByTagName("h3")[0];
+    if (!titleA || !titleB) {
+      console.error("Title element not found.");
+      return 0;
+    }
+    titleA = titleA.innerText.toLowerCase();
+    titleB = titleB.innerText.toLowerCase();
+    return titleA.localeCompare(titleB);
+  });
+}
+function sortByPlayTime() {
+  sortTable(function (a, b) {
+    var playTimeA = getPlayTime(a);
+    var playTimeB = getPlayTime(b);
+    return playTimeB - playTimeA;
+  });
+}
+function sortByAchievements() {
+  sortTable(function (a, b) {
+    var achievementsA = evalFraction(getAchievements(a));
+    var achievementsB = evalFraction(getAchievements(b));
+    return achievementsB - achievementsA;
+  });
+}
+function getPlayTime(row) {
+  var playTimeElement = row.getElementsByTagName("h4")[1];
+  if (!playTimeElement) {
+    console.error("Play time element not found.");
+    return 0;
+  }
+  return parseFloat(playTimeElement.innerText.split(":")[1].trim().split(" ")[0]) || 0;
+}
+function getAchievements(row) {
+  var achievementsElement = row.getElementsByTagName("h4")[1];
+  if (!achievementsElement) {
+    console.error("Achievements element not found.");
+    return 0;
+  }
+  var fractionString = achievementsElement.innerText.split(":")[3].trim();
+  return fractionString === "n/a" ? -1 : fractionString;
+}
+function evalFraction(fractionString) {
+  if (fractionString === "n/a") {
+    return -1;
+  }
+  try {
+    return eval(fractionString) || 0;
+  } catch (error) {
+    console.error("Error evaluating fraction:", error);
+    return 0;
+  }
+}
+
+
+//picture slider
+var slideIndex = 0;
+  showSlide(slideIndex);
+
+  function changeSlide(n) {
+    showSlide(slideIndex += n);
+  }
+
+  function showSlide(n) {
+    var slides = document.getElementsByClassName("slider-image");
+    if (n >= slides.length) { slideIndex = 0; }
+    if (n < 0) { slideIndex = slides.length - 1; }
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex].style.display = "block";
+  }
