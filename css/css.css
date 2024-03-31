@@ -284,17 +284,18 @@ gmp-map {
   height: 30px;
   margin-bottom: 10px;
 }
+/*end map stuff */
 
 /*image slider*/
 .slider-image:not(:first-child) {
   display: none;
 }
+
 #slider {
   text-align: center;
   display: block;
 }
 
-/* Center the slider wrapper */
 .slider-image {
   display: block;
   text-align: center;
@@ -308,3 +309,4 @@ gmp-map {
   margin-top: 10px;
   background-color:rgb(154, 113, 192);
 }
+/*end image slider*/

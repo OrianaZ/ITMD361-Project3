@@ -19,7 +19,6 @@ function initMap() {
   directionsRenderer = new google.maps.DirectionsRenderer();
   directionsRenderer.setMap(map);
 }
-
 //fucntion 1, user can add marker anywhere they want on the map, upon hover the coordinates will display
 function addMarker(location, map) {
   var marker = new google.maps.Marker({
@@ -37,7 +36,6 @@ function addMarker(location, map) {
   });
   markers.push(marker);
 }
-
 //user can also remove marker by clicking on them again
 function removeMarker(marker) {
   var index = markers.indexOf(marker);
@@ -46,12 +44,10 @@ function removeMarker(marker) {
     markers.splice(index, 1);
   }
 }
-
 function showMarkerDetails(marker) {
   infoWindow.setContent('<div style="color: black;">Marker position: ' + marker.getPosition().toString() + '</div>');
   infoWindow.open(map, marker);
 }
-
 //Function 2: top search box allows the user to manually search for any place, upon doing so will go there and place a marker
 //Function3: bottom search boxes allow the user to create a route between 2 places. 
 function initSearchBox() {
@@ -74,24 +70,19 @@ function initSearchBox() {
       addMarker(place.geometry.location, map);
     });
   });
-
   var input1 = document.getElementById('pac-input-1');
   var input2 = document.getElementById('pac-input-2');
   var button1 = document.getElementById('pac-input-3');
-
   var searchBox1 = new google.maps.places.SearchBox(input1);
   var searchBox2 = new google.maps.places.SearchBox(input2);
-
   map.controls[google.maps.ControlPosition.BOTTOM_LEFT].push(input1);
   map.controls[google.maps.ControlPosition.BOTTOM_LEFT].push(input2);
   map.controls[google.maps.ControlPosition.BOTTOM_LEFT].push(button1);
-
   map.addListener('bounds_changed', function() {
     searchBox1.setBounds(map.getBounds());
     searchBox2.setBounds(map.getBounds());
   });
 }
-
 function findRoute() {
   var start = document.getElementById('pac-input-1').value;
   var end = document.getElementById('pac-input-2').value;
@@ -112,8 +103,6 @@ function findRoute() {
     }
   });
 }
-
-//key=AIzaSyAOM8nEO2MVUlGhxmHIWVDwGAoyf-G0Zak
 
 //games searches
 function handleSearch() {
@@ -213,20 +202,16 @@ function evalFraction(fractionString) {
   }
 }
 
-
 //picture slider
-
-
-  function changeSlide(n) {
-    showSlide(slideIndex += n);
+function changeSlide(n) {
+  showSlide(slideIndex += n);
+}
+function showSlide(n) {
+  var slides = document.getElementsByClassName("slider-image");
+  if (n >= slides.length) { slideIndex = 0; }
+  if (n < 0) { slideIndex = slides.length - 1; }
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-
-  function showSlide(n) {
-    var slides = document.getElementsByClassName("slider-image");
-    if (n >= slides.length) { slideIndex = 0; }
-    if (n < 0) { slideIndex = slides.length - 1; }
-    for (var i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slides[slideIndex].style.display = "block";
-  }
+  slides[slideIndex].style.display = "block";
+}
