@@ -5,7 +5,7 @@
     <title>Oriana Zup Project 3</title>
     <link rel="stylesheet" type="text/css" href="css/cssreset.css">
     <link rel="stylesheet" type="text/css" href="css/css.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOM8nEO2MVUlGhxmHIWVDwGAoyf-G0Zak&callback=initMap&libraries=places" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOM8nEO2MVUlGhxmHIWVDwGAoyf-G0Zak&callback=initialize&libraries=places" async defer></script>
     <script src="index.js"></script>
   </head>
   <body id="maps">
@@ -27,9 +27,9 @@
         <gmp-map center="40.12150192260742,-100.45039367675781" zoom="5" map-id="Proj-3-Map"></gmp-map>
       </div>
       <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        function initialize() {
           initMap();
-        });
+        }
       </script>
       <div id="searchBox">
         <input id="pac-input" type="text" placeholder="Search Box">

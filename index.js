@@ -215,8 +215,7 @@ function evalFraction(fractionString) {
 
 
 //picture slider
-var slideIndex = 0;
-  showSlide(slideIndex);
+
 
   function changeSlide(n) {
     showSlide(slideIndex += n);
